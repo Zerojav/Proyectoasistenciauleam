@@ -2,6 +2,10 @@
     margin-top: 20px;
 }
 
+.alldiv{
+margin: 0 auto;
+}
+
 .acercade fieldset{
     margin-top: 20px;
     width: 700px;
@@ -18,16 +22,4 @@
 
 .acercade p{
     font-size: 18px;
-}
-
-.acercade #fieldsetad1{
-    margin: 0 auto;
-}
-
-.acercade #fieldsetad2{
-    margin-left: 400px;
-}
-
-.acercade #fieldsetad3{
-    margin-left: 400px;
 }

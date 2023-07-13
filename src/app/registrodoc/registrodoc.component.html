@@ -1,22 +1,73 @@
 <div class="registrodoc">
-    <form> 
-        <fieldset>
-          <h1>Registro de Horarios (Docentes)</h1>
-          <label for="Nombre">Nombre:</label>
-          <input type="text" id="pnombre" name="pnombre" placeholder="Ingrese aquí el nombre">
-          <label for="Facultad">Facultad:</label>
-          <input type="text" id="facultad" name="facultad" placeholder="Ingrese la facultad aquí"><br><br>
-          <label for="Correo">Correo:</label>
-          <input type="text" id="correo" name="correo" placeholder="Ingrese aquí el correo">
-          <label for="Telefono">Telefono:</label>
-          <input type="text" id="telefono" name="telefono" placeholder="Ingrese el telefono aquí"><br><br>
-          <label for="Asignatura">Asignatura:</label>
-          <input type="text" id="asignatura" name="asignatura" placeholder="Ingrese aquí la asignatura">
-          <label for="Horaentrada">Horario de Entrada:</label>
-          <input type="time" id="horaentrada" name="horaentrada" placeholder="Ingrese la hora de entrada aquí">
-          <label for="horasalida">Horario de Fin:</label>
-          <input type="time" id="horasalida" name="horasalida" placeholder="Ingrese la hora de salida aquí"><br><br>
-          <input type="submit" value="Enviar" id="Enviar" (click)="registrodoc()">
-        </fieldset>
-      </form>
+  <form (ngSubmit)="validardatosdoc()">
+    <section class="home">
+      <fieldset>
+        <h1>Registro de Horarios (Docentes)</h1>
+        <div class="row">
+          <div class="column">
+            <label for="Nombre">Nombre:</label>
+            <input type="text" id="pnombre" name="pnombre" placeholder="Ingrese aquí el nombre" ngModel required #pnombre="ngModel">
+            <div class="alert-datos" [hidden]="pnombre.valid || pnombre.pristine">
+              <p class="alert-datos-danger">*Este campo es obligatorio</p>
+            </div>
+          </div>
+          <div class="column">
+            <label for="Facultad">Facultad:</label>
+            <input type="text" id="facultad" name="facultad" placeholder="Ingrese la facultad aquí" ngModel required #facultad="ngModel">
+            <div class="alert-datos" [hidden]="facultad.valid || facultad.pristine">
+              <p class="alert-datos-danger">*Este campo es obligatorio</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <label for="Correo">Correo:</label>
+            <input type="text" id="correo" name="correo" placeholder="Ingrese aquí el correo" ngModel required #correo="ngModel">
+            <div class="alert-datos" [hidden]="correo.valid || correo.pristine">
+              <p class="alert-datos-danger">*Este campo es obligatorio</p>
+            </div>
+          </div>
+          <div class="column">
+            <label for="Telefono">Telefono:</label>
+            <input type="text" id="telefono" name="telefono" placeholder="Ingrese el telefono aquí" ngModel required #telefono="ngModel">
+            <div class="alert-datos" [hidden]="telefono.valid || telefono.pristine">
+              <p class="alert-datos-danger">*Este campo es obligatorio</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <label for="Asignatura">Asignatura:</label>
+            <input type="text" id="asignatura" name="asignatura" placeholder="Ingrese aquí la asignatura" ngModel required #asignatura="ngModel">
+            <div class="alert-datos" [hidden]="asignatura.valid || asignatura.pristine">
+              <p class="alert-datos-danger">*Este campo es obligatorio</p>
+            </div>
+          </div>
+          <div class="column">
+            <label for="Horaentrada">Horario de Entrada:</label>
+            <input type="time" id="horaentrada" name="horaentrada" placeholder="Ingrese la hora de entrada aquí" ngModel required #horaentrada="ngModel">
+            <div class="alert-datos" [hidden]="horaentrada.valid || horaentrada.pristine">
+              <p class="alert-datos-danger">*Este campo es obligatorio</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <label for="horasalida">Horario de Fin:</label>
+            <input type="time" id="horasalida" name="horasalida" placeholder="Ingrese la hora de salida aquí" ngModel required #horasalida  ="ngModel">
+            <div class="alert-datos" [hidden]="horasalida.valid || horasalida.pristine">
+              <p class="alert-datos-danger">*Este campo es obligatorio</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <input type="submit" value="Enviar" id="Enviar">
+          </div>
+        </div>
+      </fieldset>
+    </section>  
+  </form>
 </div>
+
+{{this.correo}}

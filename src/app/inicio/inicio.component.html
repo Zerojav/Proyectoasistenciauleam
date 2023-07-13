@@ -1,40 +1,26 @@
 <div class = "asistencias" >
-    <div class="seleccion-opciones"> <!-- Seleccion del filtro -->
-        <label for="facultad">Seleccionar Facultad</label>
-        <select name="facultad" id="facultad" class="filtro">
-            <option value="">Selecciona una opción por favor</option>
-            <option value="FACCI">FACCI</option>
-            <option value="Arquitectura">Arquitectura</option>
-            <option value="Economia">Economia</option>
-        </select>
-        <label for="asignatura">Seleccionar Asignatura</label>
-        <select name="asignatura" id="asignatura" class="filtro">
-            <option value="">Seleccione una opción por favor</option>
-        </select>
-        <label for="profesor">Seleccionar Profesor</label>
-        <select name="profesor" id="profesor" class="filtro">
-            <option value="">Seleccione una opción por favor</option>
-        </select>
-    </div>
     <div class="tabla"> <!-- Contenido de la tabla -->
-        <table id="tabla-asistencia"> <!-- Indica que la tabla tiene una id para referenciarla en JS-->
-            <caption>Asistencia docentes</caption>
-            <thead> <!-- Columnas de la tabla -->
-                <th>Nombre</th>
-                <th>Facultad</th>
-                <th>Asignatura</th>
-                <th>Correo</th>
-                <th>Teléfono</th>
-                <th>Hora de entrada y salida</th>
-                <th>Asistencia</th>
-            </thead>
-            <!-- Datos de la tabla-->
-            <tbody>
-            </tbody>
-            
-        </table>
-        <button (click)="mensaje()">Enviar</button>
-        <button (click)="importarXML()">Importar XML</button>
-        <button (click)="importarJSON()">Importar JSON</button>
+        <section class="home">
+            <table id="tabla-asistencia"> <!-- Indica que la tabla tiene una id para referenciarla en JS-->
+                <caption>Asistencia docentes</caption>
+                <thead> <!-- Columnas de la tabla -->
+                    <th>Nombre</th>
+                    <th>Facultad</th>
+                    <th>Asignatura</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                    <th>Hora de entrada y salida</th>
+                    <th>Asistencia</th>
+                </thead>
+                <!-- Datos de la tabla-->
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+        <div class="buttons">
+            <button (click)="mensaje()">Enviar</button>
+            <button (click)="importarXML()">Importar Datos Fijos (XML)</button>
+            <button (click)="importarJSON()">Importar Datos Reales (JSON)</button>
+        </div>
     </div>
 </div>

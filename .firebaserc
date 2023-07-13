@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "asistenciadocentesuleam5a": {
+      "hosting": {
+        "T8AW-MeroArcentalesVictorJavier-5A": [
+          "asistenciadocentesuleam5a"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "asistenciadocentesuleam5a"
+  }
+}

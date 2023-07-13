@@ -94,6 +94,13 @@
               "node_modules/jquery/dist/jquery.min.js"
             ]
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2,
+            "browserTarget": "T8AW-MeroArcentalesVictorJavier-5A:build:production"
+          }
         }
       }
     }

@@ -1,29 +1,28 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.component.css">
-    
-</head>
-<body>
     <div class="login">
-        <form (ngSubmit)="iniciarSesion();"> 
-          <fieldset>
-            <h1>Sistema de Registro de Asistencias (Docentes)</h1>
-            <div>
-                <input type="text" id="usuario" name="usuario" placeholder="Usuario" class="icon" [(ngModel)]="usuario"><br><br>
-            </div>
-            <div>
-                <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" class="icon" [(ngModel)]="contrasena"><br><br>
-            </div>
-            <div>
-                <input type="submit" value="Iniciar sesión" id="iniciar"><br><br>
-            </div>
-            <a href="/contraolv" id="contraolv">¿Olvidaste tu contraseña?</a>
-          </fieldset>
+        <form (ngSubmit)="validarCorreo();"> 
+          <section class="home">
+            <fieldset>
+              <h1>Sistema de Registro de Asistencias (Docentes)</h1>
+              <div>
+                  <input type="text" id="usuario" name="usuario" placeholder="Usuario" class="icon" [(ngModel)]="usuario" required #correo="ngModel">
+                  <div class="alert-datos" [hidden]="correo.valid || correo.pristine">
+                    <p class="alert-datos-danger">*Este campo es obligatorio</p>
+                  </div>
+                </div>
+                <br>
+              <div>
+                  <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" class="icon" [(ngModel)]="contrasena" required #contra="ngModel">
+                  <div class="alert-datos" [hidden]="contra.valid || contra.pristine">
+                    <p class="alert-datos-danger">*Este campo es obligatorio</p>
+                  </div>
+              </div>
+              <div>
+                  <input type="submit" value="Iniciar sesión" id="iniciar"><br><br>
+              </div>
+              <a href="/contraolv" id="contraolv">¿Olvidaste tu contraseña?</a><br><br>
+              <a href="/registrocuenta" id="registrocuenta">¿No tienes cuenta? Registrate aquí</a>
+              <br><br>
+            </fieldset>
+          </section>
         </form>
       </div>
-</body>
-</html>

@@ -1,0 +1,47 @@
+    <div class = "modificar">
+        <h1>Gestión de Asistencia</h1>
+        <div class="contenedor-busqueda">
+            <input type="text" [(ngModel)]="searchText" placeholder="Buscar por nombre, asignatura o facultad" class="busqueda">
+          </div>
+        <section class="home">
+            
+            <fieldset>
+                <div class="tabla">
+                    <table id="tabla-lista" [class.tabla-pequena]="hayFilasOcultas()">
+                        <thead>
+                            <th>Nombre</th>
+                            <th>Facultad</th>
+                            <th>Asignatura</th>
+                            <th>Correo</th>
+                            <th>Teléfono</th>
+                            <th>Hora de entrada y salida</th>
+                            <th>Asistencia</th>
+                            <th>Opciones</th>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of attendanceData" [hidden]="!matchesSearch(item)">
+                                <td>{{ item.nombre }}</td>
+                                <td>{{ item.facultad }}</td>
+                                <td>{{ item.asignatura }}</td>
+                                <td>{{ item.correo }}</td>
+                                <td>{{ item.telefono }}</td>
+                                <td>{{ item.horadentradaysalida }}</td>
+                                <td>{{ item.asistencia ? 'Presente' : 'Ausente' }}</td>
+                                <td>
+                                    <button id="cambiarAsistencia" (click)="cambiarAsistencia(item)">Cambiar
+                                      {{ item.asistencia ? 'Ausente' : 'Presente' }}
+                                    </button><br>
+                                    <button id="EliminarFila" (click)="eliminarItem(item)">Eliminar</button>
+                                  </td>
+                            </tr>          
+                    </table>
+                </div>
+                <button id="guardar" (click)="guardarCambios()">Guardar Cambios</button>
+                <div>
+                </div>
+            </fieldset>
+        </section>
+        
+                
+    </div>
+

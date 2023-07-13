@@ -1,0 +1,73 @@
+.registrocuenta form{
+    height: 0;
+}
+
+.registrocuenta fieldset{
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 1000px;
+    height: auto;
+    text-align: center;
+    background: rgba(21, 69, 104, 0.873);
+    border: none;
+    border-radius: 20px;
+}
+
+.registrocuenta h1, label{
+    color: #ffffff;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.registrocuenta h1{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 45px;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: #8f8f8f;
+    text-align: center;
+}
+
+.registrocuenta label{
+    width: auto;
+    text-align: left;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.registrocuenta #registrar{
+    background-color: rgb(25, 48, 123);
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    border-radius: 10px;
+    border-color:  rgb(29, 51, 126);
+    margin-bottom: 19px;
+}
+
+.registrocuenta input{
+    border-radius: 5px;
+    text-align: left;
+    padding: 15px 55px;
+    background-color: rgb(214, 219, 239);
+}
+
+.icon {
+    background-repeat: no-repeat;
+    background-position: 5px center;
+}
+
+#registrocontra{
+    background-image: url('../../resources/contra.png');
+    background-size: 30px;
+}
+
+#registrocorreo{
+    background-image: url('../../resources/correo.png');
+    background-size: 30px;
+} 
+
+.registrocuenta #login{
+    font-weight: bold;
+    color: white;
+} 

@@ -1,11 +1,11 @@
 <div class="nav-bar">
-   <ng-container *ngIf="!isLoginPage() && !isContraolvPage()">
+   <ng-container *ngIf="!isLoginPage() && !isContraolvPage() && !isRegistrocuentaPage()">
     <nav>
         <ul> <!-- Redireccion del navbar -->
             <li><a href="/inicio">Inicio</a></li>
             <li><a href="/registrodoc">Registrar Profesores</a></li>
             <li><a href="/acercade">Acerca de</a></li>
-            <li><a href="/perfil">Perfil</a></li>
+            <li><a href="/modificarprofesores">Modificar Datos</a></li>
             <li><a href="/ayuda">Ayuda</a></li>
             <li><a href="#" (click)="cerrarSesion()">Cerrar sesión</a></li>
         </ul>

@@ -51,4 +51,7 @@
     text-align: center;
     background-color: rgb(214, 219, 239);
     border-color: #000;
+    float: right;
+    margin-right: 134px;
+    resize: none;
 }

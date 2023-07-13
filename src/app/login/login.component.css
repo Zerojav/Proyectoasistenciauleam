@@ -1,7 +1,6 @@
 
 /* Inicio de la configuracion de estilos de la interfaz del login */
 
-
 .login form{
     height: 0;
 }
@@ -10,7 +9,7 @@
     margin: 0 auto;
     margin-top: 100px;
     width: 1000px;
-    height: 500px;
+    height: auto;
     text-align: center;
     background: rgba(21, 69, 104, 0.873);
     border: none;
@@ -24,8 +23,8 @@
 }
 
 .login h1{
-    margin-top: 120px;
-    margin-bottom: 70px;
+    margin-top: 100px;
+    margin-bottom: 50px;
     font-size: 45px;
     -webkit-text-stroke-width: 0.1px;
     -webkit-text-stroke-color: #8f8f8f;
@@ -38,6 +37,7 @@
 }
 
 .login #iniciar{
+    margin-top: 20px;
     background-color: rgb(25, 48, 123);
     padding: 10px 20px;
     color: rgb(255, 255, 255);
@@ -69,7 +69,7 @@
     background-size: 30px; /* Ajusta el tamaño del ícono de perfil */
   }
 
-.login #contraolv{
+.login #contraolv, #registrocuenta{
     font-weight: bold;
     color: white;
 } 

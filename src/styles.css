@@ -6,3 +6,18 @@ body { /* Se configura el background */
     background-image: url(resources/estudiantes.png);
 }
 
+.home{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.alert-datos{
+padding-right: 100px;
+padding-bottom: 0;
+}
+
+.alert-datos-danger {
+    border: none;
+    border-radius: 4px;
+    color: red;
+}

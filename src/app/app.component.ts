@@ -19,9 +19,13 @@ export class AppComponent {
     return this.router.url === '/contraolv';
   }
 
+  isRegistrocuentaPage(): boolean {
+    return this.router.url === '/registrocuenta'
+  }
+
   ngOnInit() {
     setTimeout(() => {
-      const allowedRoutes = ['login', 'contraolv']; // Rutas permitidas sin inicio de sesión
+      const allowedRoutes = ['login', 'contraolv', 'registrocuenta']; // Rutas permitidas sin inicio de sesión
       const currentRoute = this.router.url.split('/')[1]; // Obtiene la ruta actual
       console.log('Ruta actual:', currentRoute);
   

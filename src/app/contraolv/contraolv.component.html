@@ -1,15 +1,17 @@
 <div class="back">
     <fieldset>
-        <button onclick="window.location.href = '/login';">←</button>
+        <button onclick="window.location.href = '/login';">← Regresar</button>
     </fieldset>
 </div>
 <div class="contraolv">
     <form> <!-- Formulario para la peticion de contraseña olvidada -->
+      <section class="home">
         <fieldset>
           <h2>Ingrese su correo</h2>
           <label for="email">E-mail</label>
-          <input type="text" name="email" placeholder="Ingrese el correo aquí"><br><br>
+          <input type="text" name="email" id="email" placeholder="Ingrese el correo aquí" class="icon" [(ngModel)]="email"><br><br>
           <input type="submit" value="Enviar" id="Enviar" (click)="contraolv()"><br><br>
         </fieldset>
+      </section>
       </form>
 </div>

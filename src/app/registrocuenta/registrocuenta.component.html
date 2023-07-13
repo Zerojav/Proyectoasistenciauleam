@@ -1,0 +1,33 @@
+
+<div class="registrocuenta">
+    <form (ngSubmit)="validarDatos();">
+        <section class="home">
+            <fieldset>
+                <h1>Registro de Cuenta</h1>
+                <div>
+                    <div>
+                        <label for="registrocorreo">Ingrese un correo electrónico</label><br><br>
+                        <input type="text" id="registrocorreo" name="registrocorreo" placeholder="Correo" class="icon" [(ngModel)]="registrocorreo" required #correo="ngModel">
+                        <div class="alert-datos" [hidden]="correo.valid || correo.pristine">
+                            <p class="alert-datos-danger">*Este campo es obligatorio</p>
+                          </div>
+                    </div>
+                    <div>
+                        <br>
+                        <label for="registrocontra">Ingrese una contraseña</label><br><br>
+                        <input type="password" id="registrocontra" name="registrocontra" placeholder="Contraseña" class="icon" [(ngModel)]="registrocontra" required #contra="ngModel">
+                        <div class="alert-datos" [hidden]="contra.valid || contra.pristine">
+                            <p class="alert-datos-danger">*Este campo es obligatorio</p>
+                        </div>
+                    </div>
+                    <div>
+                        <br>
+                        <input type="submit" value="Registrar Cuenta" id="registrar">
+                    </div>
+                    <a href="/login" id="login">¿Ya tienes cuenta? Inicia sesión aquí</a>
+                    <br><br>
+                </div>
+            </fieldset>
+        </section>
+    </form>
+</div>
